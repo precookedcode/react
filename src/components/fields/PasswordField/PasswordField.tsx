@@ -14,6 +14,7 @@ interface PasswordFieldProps {
     descriptionStyle?: React.CSSProperties;
     className?: string;
     id?: string;
+    autoComplete?: 'off' | 'current-password' | 'new-password';
     [key: string]: any;
 }
 
@@ -29,6 +30,7 @@ const PasswordField: React.FC<PasswordFieldProps> = ({
     descriptionStyle,
     className,
     id,
+    autoComplete = 'off',
     ...props
 }) => {
     return (
@@ -66,6 +68,7 @@ const PasswordField: React.FC<PasswordFieldProps> = ({
                     onChange={onChange}
                     placeholder={placeholder}
                     id={id}
+                    autoComplete={autoComplete}
                     style={{
                         outline: "none",
                         backgroundColor: "transparent",
