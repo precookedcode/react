@@ -11,7 +11,7 @@ The `@precooked/react` package provides a collection of reusable React component
 To use `@precooked/react` in your project, first ensure you have the required peer dependencies installed:
 
 ```bash
-npm install react react-dom react-router-dom react-spring expr-eval
+npm install react react-dom react-router-dom expr-eval
 ```
 
 Then, install the `@precooked/react` package:

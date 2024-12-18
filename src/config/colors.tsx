@@ -1,7 +1,7 @@
 const colors: any = {
-  primary: "#e16945",
-  primaryShade: "#b45033",
-  primaryTint: "#f8dad1",
+  primary: "#f96711",
+  primaryShade: "#bc4e0e",
+  primaryTint: "#f7d5c3",
   dark: "#4d6572",
   medium: "#7b98ad",
   light: "#f2f2f4",
