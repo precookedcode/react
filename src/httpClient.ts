@@ -102,7 +102,7 @@ export class HttpClient {
 }
 // Crear un interceptor para añadir la hora del usuario
 const userTimeInterceptor = (options: RequestInit) => {
-  const userTime = new Date().toISOString(); // Captura la hora del usuario en UTC
+  const userTime = new Date().toLocaleString();
   options.headers = {
     ...options.headers,
     "User-Time": userTime,
