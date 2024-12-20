@@ -100,10 +100,23 @@ export class HttpClient {
     this.interceptors = [];
   }
 }
+// Crear un interceptor para añadir la hora del usuario
+const userTimeInterceptor = (options: RequestInit) => {
+  const userTime = new Date().toISOString(); // Captura la hora del usuario en UTC
+  options.headers = {
+    ...options.headers,
+    "User-Time": userTime,
+  };
+};
 
-export const httpClient = new HttpClient();
+// Crear instancias de HttpClient
+export const httpClient = new HttpClient({
+  interceptors: [userTimeInterceptor],
+});
+
 export const securedHttpClient = new HttpClient({
   interceptors: [
+    userTimeInterceptor,
     (options: RequestInit) => {
       const token = localStorage.getItem("authToken");
       if (token) {
