@@ -105,7 +105,7 @@ export const httpClient = new HttpClient();
 export const securedHttpClient = new HttpClient({
   interceptors: [
     (options: RequestInit) => {
-      const token = localStorage.getItem("token");
+      const token = localStorage.getItem("authToken");
       if (token) {
         options.headers = {
           ...options.headers,
