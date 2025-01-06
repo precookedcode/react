@@ -79,3 +79,8 @@ export { AuthProvider, useAuth } from "./contexts/AuthContext";
 
 // hooks
 export { default as useIsMobile } from "./hooks/useIsMobile";
+
+// Utils
+export { default as formatDate } from "./utils/formatDate";
+export { default as formatToShortDate } from "./utils/formatToShortDate";
+export { default as lightenDarkenColor } from "./utils/lightenDarkenColor";
