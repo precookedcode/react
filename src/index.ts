@@ -48,6 +48,8 @@ export { default as TypingEffect } from "./components/TypingEffect/TypingEffect"
 export { default as ButtonGroup } from "./components/ButtonGroup/ButtonGroup";
 export { default as NoContent } from "./components/NoContent/NoContent";
 export { default as Portal } from "./components/Portal/Portal";
+export { default as Nav } from "./components/Nav/Nav";
+export { default as Breadcrumbs } from "./components/Breadcrumbs/Breadcrumbs";
 
 // Indicators
 export { default as RankingIndicator } from "./components/indicators/RankingIndicator/RankingIndicator";
