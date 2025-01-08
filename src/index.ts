@@ -44,6 +44,7 @@ export { default as Pill } from "./components/Pill/Pill";
 export { default as PillGroup } from "./components/PillGroup/PillGroup";
 export { default as IndicatorCard } from "./components/IndicatorCard/IndicatorCard";
 export { default as Paper } from "./components/Paper/Paper";
+export { default as TypingEffect } from "./components/TypingEffect/TypingEffect";
 
 // Indicators
 export { default as RankingIndicator } from "./components/indicators/RankingIndicator/RankingIndicator";
