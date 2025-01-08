@@ -47,6 +47,7 @@ export { default as Paper } from "./components/Paper/Paper";
 export { default as TypingEffect } from "./components/TypingEffect/TypingEffect";
 export { default as ButtonGroup } from "./components/ButtonGroup/ButtonGroup";
 export { default as NoContent } from "./components/NoContent/NoContent";
+export { default as Portal } from "./components/Portal/Portal";
 
 // Indicators
 export { default as RankingIndicator } from "./components/indicators/RankingIndicator/RankingIndicator";
