@@ -71,8 +71,6 @@ export { default as DotLoader } from "./components/Loader/DotLoader";
 // Config
 export { default as colors } from "./config/colors";
 
-// Utils
-
 // httpClient
 export {
   httpClient, // Default client instance
@@ -90,3 +88,4 @@ export { default as useIsMobile } from "./hooks/useIsMobile";
 export { default as formatDate } from "./utils/formatDate";
 export { default as formatToShortDate } from "./utils/formatToShortDate";
 export { default as lightenDarkenColor } from "./utils/lightenDarkenColor";
+export { default as adjustColor } from "./utils/adjustColor";

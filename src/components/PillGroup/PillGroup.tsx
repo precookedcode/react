@@ -5,7 +5,7 @@ import { colors } from '../../config';
 interface PillGroupProps {
     pills: Array<{
         id: string | number; // Unique identifier for each pill
-        text: string; // Text to display inside the pill
+        text?: string; // Text to display inside the pill
         startIcon?: string; // Optional icon at the start of the pill
         endIcon?: string; // Optional icon at the end of the pill
         color?: string; // Background color of the pill
@@ -25,6 +25,7 @@ interface PillGroupProps {
     pillColor?: string; // Global background color for all pills
     pillTextColor?: string; // Global text color for all pills
     pillSize?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'; // Global size for all pills
+    pillTextKey?: string; // Text to display inside the pill
 }
 
 const PillGroup: React.FC<PillGroupProps> = ({
@@ -37,6 +38,7 @@ const PillGroup: React.FC<PillGroupProps> = ({
     pillColor,
     pillTextColor,
     pillSize,
+    pillTextKey
 }) => {
     return (
         <div
@@ -51,7 +53,11 @@ const PillGroup: React.FC<PillGroupProps> = ({
             {pills.map((pill, index) => (
                 <Pill
                     key={pill.id || index}
-                    text={pill.text}
+                    text={
+                        pill.text ||
+                        (pillTextKey ? String(pill[pillTextKey as keyof typeof pill] || '') : '')
+                    }
+
                     startIcon={pill.startIcon}
                     endIcon={pill.endIcon}
                     // Global styles are overridden by specific pill styles
