@@ -1,6 +1,6 @@
 import React from 'react';
 import Pill from '../Pill/Pill';
-import { colors } from '../../config';
+import themeColors from '../../config/themeColors';
 
 interface PillGroupProps {
     pills: Array<{
@@ -61,8 +61,8 @@ const PillGroup: React.FC<PillGroupProps> = ({
                     startIcon={pill.startIcon}
                     endIcon={pill.endIcon}
                     // Global styles are overridden by specific pill styles
-                    color={pill.color || pillColor || colors.primary}
-                    textColor={pill.textColor || pillTextColor || colors.textShade}
+                    color={pill.color || pillColor || themeColors.primary}
+                    textColor={pill.textColor || pillTextColor || themeColors.textShade}
                     containerStyle={{ ...pillContainerStyle, ...pill.containerStyle }}
                     textStyle={{ ...pillTextStyle, ...pill.textStyle }}
                     startIconStyle={pill.startIconStyle}

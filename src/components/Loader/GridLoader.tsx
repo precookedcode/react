@@ -1,5 +1,5 @@
 import React from 'react';
-import { colors } from '../../config';
+import themeColors from '../../config/themeColors';
 
 interface GridLoaderProps {
     color?: string;
@@ -7,7 +7,7 @@ interface GridLoaderProps {
 }
 
 const GridLoader: React.FC<GridLoaderProps> = ({ color = 'text', size = 40 }) => {
-    const resolvedColor = color in colors ? colors[color as keyof typeof colors] : color;
+    const resolvedColor = color in themeColors ? themeColors[color as keyof typeof themeColors] : color;
 
     // Estilos en JavaScript
     const gridLoaderStyle: React.CSSProperties = {

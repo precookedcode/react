@@ -1,6 +1,6 @@
 import React, { useState, CSSProperties } from 'react';
 import AnimatedNumber from '../AnimatedNumber/AnimatedNumber';
-import { colors } from '../../config';
+import themeColors from '../../config/themeColors';
 
 import MiniGroupedBarChart from '../miniCharts/MiniGroupedBarChart/MiniGroupedBarChart';
 import MiniStackedBarChart from '../miniCharts/MiniStackedBarChart/MiniStackedBarChart';
@@ -87,11 +87,10 @@ const IndicatorCard: React.FC<IndicatorCardProps> = ({
 }) => {
     // Get the latest period
     const latestPeriod = data[data.length - 1];
-    //const [currentColor, setCurrentColor] = useState<string>(colors.primary);
     const [currentColor, setCurrentColor] = useState<string | undefined>(
         type === 'disaggregated' || type === 'composite'
             ? (latestPeriod as DisaggregatedData | CompositeData).values[0].color
-            : colors.primary
+            : themeColors.primary
     );
     const [currentPeriod, setCurrentPeriod] = useState<string>(
         latestPeriod.displayPeriod || latestPeriod.period
@@ -113,7 +112,6 @@ const IndicatorCard: React.FC<IndicatorCardProps> = ({
         flexDirection: 'column',
         justifyContent: 'space-between',
         alignItems: 'center',
-        //border: '1px solid #ccc',
         borderRadius: '5px',
         padding: '5px',
         width: '150px',
@@ -130,18 +128,18 @@ const IndicatorCard: React.FC<IndicatorCardProps> = ({
         textAlign: 'center',
         lineHeight: 1.1,
         marginBottom: 7,
-        color: colors.text,
+        color: themeColors.text,
 
     };
     const defaultPeriodStyle: CSSProperties = {
         fontSize: 15,
-        color: colors.text,
+        color: themeColors.text,
         fontWeight: 900,
         marginBottom: 0
     };
     const defaultValueStyle: CSSProperties = {
         fontSize: chartType == 'pie' ? 16 : 22,
-        color: colors.primary,
+        color: themeColors.primary,
         fontWeight: 900,
 
     };
@@ -150,7 +148,7 @@ const IndicatorCard: React.FC<IndicatorCardProps> = ({
         padding: 0,
         margin: 0,
         fontSize: '14px',
-        color: chartType == 'pie' ? currentColor : colors.primary,
+        color: chartType == 'pie' ? currentColor : themeColors.primary,
         position: 'relative',
         top: -7,
         //color: '#666',
@@ -159,7 +157,7 @@ const IndicatorCard: React.FC<IndicatorCardProps> = ({
 
     const defaultMeasurementUnitStyle: CSSProperties = {
         fontSize: 14,
-        color: colors.textTint,
+        color: themeColors.textTint,
         marginLeft: '4px',
     };
 
@@ -379,7 +377,7 @@ const IndicatorCard: React.FC<IndicatorCardProps> = ({
                     type={'clear'}
                     hasShadow={false}
                     size='xs'
-                    color={colors.text}
+                    color={themeColors.text}
                     onClick={() => { }}
                 />
                 <IconButton
@@ -387,7 +385,7 @@ const IndicatorCard: React.FC<IndicatorCardProps> = ({
                     type={'clear'}
                     hasShadow={false}
                     size='xs'
-                    color={colors.text}
+                    color={themeColors.text}
                     onClick={() => { }}
                 />
                 <IconButton
@@ -395,7 +393,7 @@ const IndicatorCard: React.FC<IndicatorCardProps> = ({
                     type={'clear'}
                     hasShadow={false}
                     size='xs'
-                    color={colors.text}
+                    color={themeColors.text}
                     onClick={() => { }}
                 />
 

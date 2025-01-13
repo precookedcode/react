@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { httpClient, securedHttpClient } from '../../../httpClient';
 import Popover from '../../Popover/Popover';
-import { colors } from '../../../config';
+import themeColors from '../../../config/themeColors';
 import Icon from '../../Icon/Icon';
 
 interface AutocompleteFieldProps {
@@ -197,12 +197,12 @@ const AutocompleteField: React.FC<AutocompleteFieldProps> = ({
                             <div>
                                 <span>{searchOptions.find((opt) => opt[primaryKey] === selectedOptions)?.[primaryKey]}</span>
                                 {secondaryKey && searchOptions.find((opt) => opt[primaryKey] === selectedOptions)?.[secondaryKey] && (
-                                    <div style={{ fontSize: '0.8em', color: colors.textTint }}>
+                                    <div style={{ fontSize: '0.8em', color: themeColors.textTint }}>
                                         {searchOptions.find((opt) => opt[primaryKey] === selectedOptions)?.[secondaryKey]}
                                     </div>
                                 )}
                             </div>
-                            <Icon name="close" size={12} color={colors.textTint} />
+                            <Icon name="close" size={12} color={themeColors.textTint} />
                         </div>
 
                     </div>
@@ -248,12 +248,12 @@ const AutocompleteField: React.FC<AutocompleteFieldProps> = ({
                                     <div>
                                         <span>{optionData?.[primaryKey]}</span>
                                         {secondaryKey && optionData?.[secondaryKey] && (
-                                            <div style={{ fontSize: '0.8em', color: colors.textTint }}>
+                                            <div style={{ fontSize: '0.8em', color: themeColors.textTint }}>
                                                 {optionData[secondaryKey]}
                                             </div>
                                         )}
                                     </div>
-                                    <Icon name="close" size={12} color={colors.textTint} />
+                                    <Icon name="close" size={12} color={themeColors.textTint} />
                                 </div>
                             );
                         })}
@@ -267,11 +267,11 @@ const AutocompleteField: React.FC<AutocompleteFieldProps> = ({
                     content={
                         <div style={{ maxHeight: '200px', overflowY: 'auto', ...popoverStyle }}>
                             {isSearching ? (
-                                <div style={{ padding: '8px', textAlign: 'center', color: colors.textTint }}>
+                                <div style={{ padding: '8px', textAlign: 'center', color: themeColors.textTint }}>
                                     {searchingText}
                                 </div>
                             ) : searchOptions.length === 0 ? (
-                                <div style={{ padding: '8px', textAlign: 'center', color: colors.textTint }}>
+                                <div style={{ padding: '8px', textAlign: 'center', color: themeColors.textTint }}>
                                     {noResultsText}
                                 </div>
                             ) : (
@@ -286,9 +286,9 @@ const AutocompleteField: React.FC<AutocompleteFieldProps> = ({
                                             padding: '8px',
                                             cursor: 'pointer',
                                             backgroundColor: activeIndex === index
-                                                ? colors.textTint
+                                                ? themeColors.textTint
                                                 : Array.isArray(selectedOptions) && selectedOptions.includes(option[primaryKey])
-                                                    ? colors.textTint
+                                                    ? themeColors.textTint
                                                     : 'transparent',
                                             color: activeIndex === index
                                                 ? '#fff'
@@ -307,7 +307,7 @@ const AutocompleteField: React.FC<AutocompleteFieldProps> = ({
                                         <div>
                                             <div>{option[primaryKey]}</div>
                                             {secondaryKey && option[secondaryKey] && (
-                                                <div style={{ fontSize: '0.8em', color: colors.textTint }}>
+                                                <div style={{ fontSize: '0.8em', color: themeColors.textTint }}>
                                                     {option[secondaryKey]}
                                                 </div>
                                             )}
@@ -329,7 +329,7 @@ const AutocompleteField: React.FC<AutocompleteFieldProps> = ({
                 display: 'block',
                 padding: '3px',
                 margin: 0,
-                color: colors.textTint,
+                color: themeColors.textTint,
                 fontSize: '.9em',
                 ...descriptionStyle
             }}>{description}</p>}

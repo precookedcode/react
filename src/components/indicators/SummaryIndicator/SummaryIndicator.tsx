@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { colors } from "../../../config";
+import themeColors from "../../../config/themeColors";
 import AnimatedNumber from "../../AnimatedNumber/AnimatedNumber";
 import Icon from "../../Icon/Icon";
 
@@ -36,7 +36,7 @@ const SummaryIndicator: React.FC<SummaryIndicatorProps> = ({
 
     // Determina el color y el ícono de la variación
     const isPositive = absoluteVariation !== null && absoluteVariation >= 0;
-    const variationColor = isPositive ? colors.success : colors.danger;
+    const variationColor = isPositive ? themeColors.success : themeColors.danger;
     const variationIcon = isPositive ? "upArrow" : "downArrow";
 
     // // Navega al periodo anterior
@@ -94,7 +94,7 @@ const SummaryIndicator: React.FC<SummaryIndicatorProps> = ({
                         style={{
                             fontSize: "27px",
                             fontWeight: "900",
-                            color: colors.textShade
+                            color: themeColors.textShade
                         }}
                     />
 

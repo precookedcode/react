@@ -69,7 +69,8 @@ export { default as GridLoader } from "./components/Loader/GridLoader";
 export { default as DotLoader } from "./components/Loader/DotLoader";
 
 // Config
-export { default as colors } from "./config/colors";
+export { default as themeColors } from "./config/themeColors";
+export { default as palette } from "./config/palette";
 
 // httpClient
 export {

@@ -11,7 +11,7 @@ import {
     ChartData,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
-import { colors } from "../../../config";
+import themeColors from "../../../config/themeColors";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
@@ -39,12 +39,12 @@ const MiniLineChart: React.FC<MiniLineChartProps> = ({
     data,
     width = "100%",
     height = 70,
-    lineColor = colors.medium,
+    lineColor = themeColors.medium,
     lineWidth = 2,
     showMarkers = true,
-    markerStyle = { fill: colors.medium, stroke: "#ffffff", strokeWidth: 2 },
+    markerStyle = { fill: themeColors.medium, stroke: "#ffffff", strokeWidth: 2 },
     highlightIndex,
-    highlightColor = colors.primary,
+    highlightColor = themeColors.primary,
     decimalPrecision = 2,
     onMarkerClick,
 }) => {

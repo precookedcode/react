@@ -1,18 +1,18 @@
 import React from 'react';
-import { colors } from '../../config';
+import themeColors from '../../config/themeColors';
 import Icon from '../Icon/Icon';
 import DynamicIcon from '../DynamicIcon/DynamicIcon';
 
 const resolveColor = (color?: string, colorKey?: string, extraData?: any) => {
     if (colorKey && extraData && extraData[colorKey]) {
         const resolvedColor = extraData[colorKey];
-        return colors[resolvedColor as keyof typeof colors] || resolvedColor; // Usamos colors si está en utils, si no, el valor es CSS
-    } else if (color && (color in colors)) {
-        return colors[color as keyof typeof colors];
+        return themeColors[resolvedColor as keyof typeof themeColors] || resolvedColor; // Usamos colors si está en utils, si no, el valor es CSS
+    } else if (color && (color in themeColors)) {
+        return themeColors[color as keyof typeof themeColors];
     } else if (color) {
         return color;
     } else {
-        return colors.text;
+        return themeColors.text;
     }
 };
 

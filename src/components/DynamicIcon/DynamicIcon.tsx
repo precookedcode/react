@@ -1,5 +1,5 @@
 import React from "react";
-import { colors } from "../../config";
+import themeColors from "../../config/themeColors";
 
 interface Path {
     d: string;
@@ -15,8 +15,8 @@ interface DynamicIconProps {
 
 const DynamicIcon: React.FC<DynamicIconProps> = ({ size = 24, paths, style }) => {
     const getColor = (pathColor?: string): string | undefined => {
-        if (pathColor && pathColor in colors) {
-            return colors[pathColor as keyof typeof colors];
+        if (pathColor && pathColor in themeColors) {
+            return themeColors[pathColor as keyof typeof themeColors];
         }
         return pathColor;
     };
@@ -30,7 +30,7 @@ const DynamicIcon: React.FC<DynamicIconProps> = ({ size = 24, paths, style }) =>
             {paths.map((path, index) => (
                 <path
                     key={index}
-                    fill={getColor(path.color) || colors.text}
+                    fill={getColor(path.color) || themeColors.text}
                     d={path.d}
                 />
             ))}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { colors } from '../../config';
+import themeColors from '../../config/themeColors';
 
 
 interface SpinnerLoaderProps {
@@ -8,7 +8,7 @@ interface SpinnerLoaderProps {
 }
 
 const SpinnerLoader: React.FC<SpinnerLoaderProps> = ({ color = 'text', size = 40 }) => {
-    const resolvedColor = color in colors ? colors[color as keyof typeof colors] : color;
+    const resolvedColor = color in themeColors ? themeColors[color as keyof typeof themeColors] : color;
 
     // Convertir el tamaño a número para calcular el ancho del borde
     //const sizeInPx = parseFloat(size);
@@ -22,7 +22,7 @@ const SpinnerLoader: React.FC<SpinnerLoaderProps> = ({ color = 'text', size = 40
         display: 'inline-block',
         width: size,
         height: size,
-        border: `${borderWidth} solid ${colors.light}`, // Fondo del círculo
+        border: `${borderWidth} solid ${themeColors.light}`, // Fondo del círculo
         borderTop: `${borderWidth} solid ${resolvedColor}`, // Color del borde superior (para el spinner)
         borderRadius: '50%',
         boxSizing: 'border-box',

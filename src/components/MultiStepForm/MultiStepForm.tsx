@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DynamicForm from "../DynamicForm/DynamicForm";
 import Button from "../buttons/Button/Button";
-import { colors } from "../../config";
+import themeColors from "../../config/themeColors";
 
 interface Step {
     title: string;
@@ -95,7 +95,7 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({
                     <h2 style={{
                         textAlign: "center",
                         marginBottom: "20px",
-                        color: colors.text
+                        color: themeColors.text
                     }}>{currentStep?.title}</h2>
 
                     <DynamicForm
@@ -141,7 +141,7 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({
                                                 ? "not-allowed"
                                                 : "pointer",
                                     }}
-                                    color={colors.medium}
+                                    color={themeColors.medium}
                                 />
                             )}
                         </div>
@@ -172,7 +172,7 @@ const MultiStepForm: React.FC<MultiStepFormProps> = ({
                                         ? "pointer"
                                         : "not-allowed",
                             }}
-                            color={colors.medium}
+                            color={themeColors.medium}
                         />
                     </div>
                 </div>

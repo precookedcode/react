@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { colors } from "../../config";
+import themeColors from "../../config/themeColors";
 import Button from '../buttons/Button/Button';
 
 interface Button {
@@ -96,11 +96,11 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({
                     titleStyle={{
                         fontWeight: '600',
                         fontSize: 14,
-                        color: colors.textShade,
+                        color: themeColors.textShade,
                         ...button.titleStyle
                     }}
                     borderRadius={10}
-                    color={colors.text}
+                    color={themeColors.text}
                     hasShadow={true}
                     endIcon={button.endIcon}
                     endIconColor={button.endIconColor}

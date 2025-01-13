@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import IconButton from "../buttons/IconButton/IconButton";
 import { useLocation, useNavigate } from "react-router-dom";
 import Icon from "../Icon/Icon";
-import { colors } from "../../config";
+import themeColors from "../../config/themeColors";
 
 interface BrandProps {
     containerStyle?: React.CSSProperties;
@@ -149,7 +149,7 @@ const SideMenu: FC<SideMenuProps> = ({
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
-                color: colors.textTint,
+                color: themeColors.textTint,
                 boxSizing: "border-box",
                 ...containerStyle
             }}

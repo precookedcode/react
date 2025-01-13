@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { httpClient, HttpClient, securedHttpClient } from "../../../httpClient";
 import Loader from "../../Loader/Loader";
 import IconButton from "../IconButton/IconButton";
-import { colors } from "../../../config";
+import themeColors from "../../../config/themeColors";
 
 
 interface PlayPauseButtonProps {
@@ -98,7 +98,7 @@ const PlayPauseButton: React.FC<PlayPauseButtonProps> = ({
                 <IconButton
                     type="clear"
                     hasShadow={false}
-                    color={value ? "primary" : colors.textTint}
+                    color={value ? "primary" : themeColors.textTint}
                     onClick={handleClick}
                     icon={value ? "pause" : "play"}
                     size={size}

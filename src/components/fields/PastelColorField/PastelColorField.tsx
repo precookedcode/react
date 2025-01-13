@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { colors } from '../../../config';
+import themeColors from '../../../config/themeColors';
 import Popover from '../../Popover/Popover';
 
 interface PastelColorFieldProps {
@@ -69,7 +69,7 @@ const PastelColorField: React.FC<PastelColorFieldProps> = ({
                 style={{
                     background: "#fff",
                     width: "100%",
-                    borderColor: colors.medium,
+                    borderColor: themeColors.medium,
                     borderWidth: "2px",
                     borderRadius: "10px",
                     borderStyle: "solid",
@@ -89,7 +89,7 @@ const PastelColorField: React.FC<PastelColorFieldProps> = ({
                     padding: "0 5px",
                     background: "#fff",
                     fontWeight: "600",
-                    color: colors.text,
+                    color: themeColors.text,
                     ...labelStyle
                 }}>{label}</label>
 
@@ -159,7 +159,7 @@ const PastelColorField: React.FC<PastelColorFieldProps> = ({
                 display: "block",
                 padding: "3px",
                 margin: 0,
-                color: colors.textTint,
+                color: themeColors.textTint,
                 fontSize: ".9em",
                 ...descriptionStyle
             }}>{description}</p>}

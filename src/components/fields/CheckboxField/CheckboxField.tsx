@@ -1,5 +1,5 @@
 import React from 'react';
-import { colors } from '../../../config';
+import themeColors from '../../../config/themeColors';
 import Icon from '../../Icon/Icon';
 
 
@@ -44,7 +44,7 @@ const CheckboxField: React.FC<CheckboxFieldProps> = ({
             id={id}
             className={`checkbox-field-container ${className}`}
             style={{
-                backgroundColor: colors.light,
+                backgroundColor: themeColors.light,
                 borderRadius: "10px",
                 padding: 10,
                 //paddingTop: 0,
@@ -96,7 +96,7 @@ const CheckboxField: React.FC<CheckboxFieldProps> = ({
                 >
                     <label style={{
                         cursor: 'pointer',
-                        color: colors.text,
+                        color: themeColors.text,
                         fontWeight: 'bold',
                         ...labelStyle
                     }}>{label}</label>
@@ -107,7 +107,7 @@ const CheckboxField: React.FC<CheckboxFieldProps> = ({
                         display: "block",
                         padding: "0px 3px",
                         margin: 0,
-                        color: colors.textTint,
+                        color: themeColors.textTint,
                         fontSize: ".9em",
                         ...descriptionStyle
                     }}>{description}</p>}

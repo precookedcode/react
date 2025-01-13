@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from '../Icon/Icon';
-import { colors } from '../../config';
+import themeColors from '../../config/themeColors';
 
 // Define the props interface for the Pill component
 interface PillProps {
@@ -30,8 +30,8 @@ const Pill: React.FC<PillProps> = ({
     text,
     startIcon,
     endIcon,
-    color = colors.primary,
-    textColor = colors.text,
+    color = themeColors.primary,
+    textColor = themeColors.text,
     containerStyle,
     textStyle,
     startIconStyle,

@@ -1,18 +1,18 @@
 import React from 'react';
 
-import { colors } from '../../config';
+import themeColors from '../../config/themeColors';
 import DynamicIcon from '../DynamicIcon/DynamicIcon';
 import { icons } from '../../data/icons';
 
 const resolveColor = (color: string | undefined, colorKey: string | undefined, extraData: any) => {
     if (colorKey && extraData && extraData[colorKey]) {
         return extraData[colorKey]; // Usamos el color de extraData basado en colorKey
-    } else if (color && (color in colors)) {
-        return colors[color as keyof typeof colors]; // Nos aseguramos de que 'color' sea una clave válida de 'colors'
+    } else if (color && (color in themeColors)) {
+        return themeColors[color as keyof typeof themeColors]; // Nos aseguramos de que 'color' sea una clave válida de 'colors'
     } else if (color) {
         return color; // Asumimos que es un valor CSS válido (hexadecimal u otro formato)
     } else {
-        return colors.text; // Color por defecto si no se pasa ninguno
+        return themeColors.text; // Color por defecto si no se pasa ninguno
     }
 };
 
@@ -33,7 +33,7 @@ const resolvePaths = (paths: any, pathsKey: string | undefined, extraData: any) 
 
 interface IconPath {
     d: string;
-    color?: keyof typeof colors | string;
+    color?: keyof typeof themeColors | string;
 }
 
 interface IconProps {
@@ -69,7 +69,7 @@ const Icon: React.FC<IconProps> = ({
 
     const preparedPaths = iconPaths.map((path: IconPath) => ({
         ...path,
-        color: resolvedColor || path.color || colors.text,
+        color: resolvedColor || path.color || themeColors.text,
     }));
 
 

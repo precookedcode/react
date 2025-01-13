@@ -1,5 +1,5 @@
 import React from "react";
-import { colors } from "../../config";
+import themeColors from "../../config/themeColors";
 import Icon from "../Icon/Icon";
 
 interface Step {
@@ -26,7 +26,7 @@ const StepTracker: React.FC<StepTrackerProps> = ({ steps, stepDisplayNameKey }) 
                         statusIcon = (
                             <Icon
                                 name="circleOutline"
-                                color={colors.primary}
+                                color={themeColors.primary}
                                 size={28}
                             />
                         );
@@ -38,7 +38,7 @@ const StepTracker: React.FC<StepTrackerProps> = ({ steps, stepDisplayNameKey }) 
                             <Icon
                                 name="checkmarkCircle"
                                 size={28}
-                                color={colors.primary}
+                                color={themeColors.primary}
                                 style={styles.statusIcon}
                             />
                         );
@@ -49,7 +49,7 @@ const StepTracker: React.FC<StepTrackerProps> = ({ steps, stepDisplayNameKey }) 
                         statusIcon = (
                             <Icon
                                 name="circleOutline"
-                                color={colors.primary}
+                                color={themeColors.primary}
                                 size={28}
                             />
                         );
@@ -60,7 +60,7 @@ const StepTracker: React.FC<StepTrackerProps> = ({ steps, stepDisplayNameKey }) 
                         statusIcon = (
                             <Icon
                                 name="alertCircle"
-                                color={colors.danger}
+                                color={themeColors.danger}
                                 size={28}
                             />
                         );
@@ -71,7 +71,7 @@ const StepTracker: React.FC<StepTrackerProps> = ({ steps, stepDisplayNameKey }) 
                         statusIcon = (
                             <Icon
                                 name="alertCircle"
-                                color={colors.danger}
+                                color={themeColors.danger}
                                 size={28}
                             />
                         );
@@ -83,7 +83,7 @@ const StepTracker: React.FC<StepTrackerProps> = ({ steps, stepDisplayNameKey }) 
                             <Icon
                                 name="saveAsDraft"
                                 size={20}
-                                color={colors.medium}
+                                color={themeColors.medium}
                                 style={{ position: "relative", top: 3, left: 1 }}
                             />
                         );
@@ -104,7 +104,7 @@ const StepTracker: React.FC<StepTrackerProps> = ({ steps, stepDisplayNameKey }) 
                                     <svg width="32" height="3" style={styles.dashedSVG}>
                                         <line
                                             x1="0" y1="1.5" x2="32" y2="1.5"
-                                            stroke={colors.primary}
+                                            stroke={themeColors.primary}
                                             strokeWidth="3"
                                             strokeDasharray="5,4"
                                         />
@@ -131,7 +131,7 @@ const StepTracker: React.FC<StepTrackerProps> = ({ steps, stepDisplayNameKey }) 
                                     <svg width="32" height="3" style={styles.dashedSVG}>
                                         <line
                                             x1="0" y1="1.5" x2="32" y2="1.5"
-                                            stroke={colors.primary}
+                                            stroke={themeColors.primary}
                                             strokeWidth="3"
                                             strokeDasharray="5,4"
                                         />
@@ -165,13 +165,13 @@ const styles: { [key: string]: React.CSSProperties } = {
     displayName: {
         textAlign: "center",
         fontWeight: "500",
-        color: colors.primaryShade,
+        color: themeColors.primaryShade,
         fontSize: 11
     },
     statusIconWrapper: {
         width: 30,
         height: 30,
-        borderColor: colors.primary,
+        borderColor: themeColors.primary,
         borderWidth: 3,
         borderRadius: "50%",
         position: "absolute",
@@ -189,13 +189,13 @@ const styles: { [key: string]: React.CSSProperties } = {
         textAlign: "center",
         position: "relative",
         top: 28,
-        color: colors.textTint,
+        color: themeColors.textTint,
         fontSize: 12,
     },
     solidLine: {
         position: "absolute",
         height: 3,
-        backgroundColor: colors.primary,
+        backgroundColor: themeColors.primary,
         width: 34,
         top: 43,
     },

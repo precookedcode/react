@@ -1,5 +1,5 @@
 import React from 'react';
-import { colors } from '../../../config';
+import themeColors from '../../../config/themeColors';
 
 
 interface RadioFieldProps {
@@ -43,7 +43,7 @@ const RadioField: React.FC<RadioFieldProps> = ({
         <>
             <div className={`radio-field-container ${className}`}
                 style={{
-                    backgroundColor: colors.light,
+                    backgroundColor: themeColors.light,
                     borderRadius: "10px",
                     padding: 10,
                     position: "relative",
@@ -62,7 +62,7 @@ const RadioField: React.FC<RadioFieldProps> = ({
                 >
                     <label style={{
                         fontWeight: "600",
-                        color: colors.text,
+                        color: themeColors.text,
                         ...labelStyle
                     }}>{label}</label>
                 </div>
@@ -91,14 +91,14 @@ const RadioField: React.FC<RadioFieldProps> = ({
                                     style={{
                                         display: "inline-block",
                                         borderRadius: "99px",
-                                        border: `2px solid ${colors.primary}`,
+                                        border: `2px solid ${themeColors.primary}`,
                                         padding: "5px 10px",
                                         fontWeight: isActive ? 500 : 300,
-                                        color: isActive ? "#fff" : colors.primary,
+                                        color: isActive ? "#fff" : themeColors.primary,
                                         fontSize: ".9em",
                                         margin: "3px",
                                         cursor: "pointer",
-                                        backgroundColor: isActive ? colors.primary : "transparent"
+                                        backgroundColor: isActive ? themeColors.primary : "transparent"
                                     }}
                                 >
                                     <span>{option?.displayName}</span>
@@ -116,7 +116,7 @@ const RadioField: React.FC<RadioFieldProps> = ({
                 display: "block",
                 padding: "3px",
                 margin: 0,
-                color: colors.textTint,
+                color: themeColors.textTint,
                 fontSize: ".9em",
                 ...descriptionStyle
             }}>{description}</p>}

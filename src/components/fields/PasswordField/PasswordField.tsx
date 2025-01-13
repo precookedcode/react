@@ -1,5 +1,5 @@
 import React from 'react';
-import { colors } from '../../../config';
+import themeColors from '../../../config/themeColors';
 
 
 interface PasswordFieldProps {
@@ -39,7 +39,7 @@ const PasswordField: React.FC<PasswordFieldProps> = ({
                 style={{
                     background: "#fff",
                     width: "100%",
-                    borderColor: colors.medium,
+                    borderColor: themeColors.medium,
                     borderWidth: "2px",
                     borderRadius: "10px",
                     borderStyle: "solid",
@@ -58,7 +58,7 @@ const PasswordField: React.FC<PasswordFieldProps> = ({
                     padding: "0 5px",
                     background: "#fff",
                     fontWeight: "600",
-                    color: colors.text,
+                    color: themeColors.text,
                     ...labelStyle
                 }}>{label}</label>
 
@@ -74,7 +74,7 @@ const PasswordField: React.FC<PasswordFieldProps> = ({
                         backgroundColor: "transparent",
                         border: "none",
                         width: "100%",
-                        color: colors.text,
+                        color: themeColors.text,
                         ...inputStyle
                     }}
                     {...props}
@@ -86,7 +86,7 @@ const PasswordField: React.FC<PasswordFieldProps> = ({
                 display: "block",
                 padding: "3px",
                 margin: 0,
-                color: colors.textTint,
+                color: themeColors.textTint,
                 fontSize: ".9em",
                 ...descriptionStyle
             }}>{description}</p>}

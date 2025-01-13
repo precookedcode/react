@@ -1,5 +1,5 @@
 import React from 'react';
-import { colors } from '../../../config';
+import themeColors from '../../../config/themeColors';
 
 
 interface TextFieldProps {
@@ -38,7 +38,7 @@ const TextField: React.FC<TextFieldProps> = ({
                 style={{
                     background: "#fff",
                     width: "100%",
-                    borderColor: colors.medium,
+                    borderColor: themeColors.medium,
                     borderWidth: "2px",
                     borderRadius: "10px",
                     borderStyle: "solid",
@@ -57,7 +57,7 @@ const TextField: React.FC<TextFieldProps> = ({
                     padding: "0 5px",
                     background: "#fff",
                     fontWeight: "600",
-                    color: colors.text,
+                    color: themeColors.text,
                     ...labelStyle
                 }}>{label}</label>
 
@@ -72,7 +72,7 @@ const TextField: React.FC<TextFieldProps> = ({
                         backgroundColor: "transparent",
                         border: "none",
                         width: "100%",
-                        color: colors.text,
+                        color: themeColors.text,
                         ...inputStyle
                     }}
                     {...props}
@@ -84,7 +84,7 @@ const TextField: React.FC<TextFieldProps> = ({
                 display: "block",
                 padding: "3px",
                 margin: 0,
-                color: colors.textTint,
+                color: themeColors.textTint,
                 fontSize: ".9em",
                 ...descriptionStyle
             }}>{description}</p>}

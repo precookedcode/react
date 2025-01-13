@@ -10,7 +10,7 @@ import {
     ChartData,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { colors } from "../../../config";
+import themeColors from "../../../config/themeColors";
 
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
@@ -38,11 +38,11 @@ const MiniBarChart: React.FC<MiniBarChartProps> = ({
     data,
     width = "100%",
     height = 70,
-    barColor = colors.medium,
+    barColor = themeColors.medium,
     barBorderWidth = 0,
     barBorderColor = "transparent",
     highlightIndex,
-    highlightColor = colors.primary,
+    highlightColor = themeColors.primary,
     decimalPrecision = 2,
     onBarClick,
 }) => {

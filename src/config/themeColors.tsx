@@ -1,4 +1,4 @@
-const colors: any = {
+const themeColors: any = {
   primary: "#f96711",
   primaryShade: "#bc4e0e",
   primaryTint: "#f7d5c3",
@@ -14,4 +14,4 @@ const colors: any = {
   info: "#54b4d3"
 };
 
-export default colors;
+export default themeColors;

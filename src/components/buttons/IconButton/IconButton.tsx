@@ -1,7 +1,7 @@
 import React, { useState, forwardRef } from "react";
 import Icon from "../../Icon/Icon";
 import DynamicIcon from "../../DynamicIcon/DynamicIcon";
-import { colors } from "../../../config";
+import themeColors from "../../../config/themeColors";
 import Touchable from "../../Touchable/Touchable";
 
 const hexToRgb = (hex: string) => {
@@ -42,7 +42,7 @@ const resolveIcon = (
 
 interface IconButtonProps {
     onClick: () => void;
-    color?: keyof typeof colors | string;
+    color?: keyof typeof themeColors | string;
     borderRadius?: number;
     type?: "clear" | "outline" | "solid";
     disabled?: boolean;
@@ -92,12 +92,12 @@ const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(({
     const buttonSize = sizeStyle[size].size;
     const calculatedIconSize = iconSize ?? sizeStyle[size].iconSize;
 
-    const resolvedColor = color in colors ? colors[color as keyof typeof colors] : color;
+    const resolvedColor = color in themeColors ? themeColors[color as keyof typeof themeColors] : color;
     const iconColor =
         type === "solid"
             ? isDarkColor(resolvedColor || "")
                 ? "#fff"
-                : colors.textShade
+                : themeColors.textShade
             : resolvedColor;
 
     const buttonStyle: React.CSSProperties = {

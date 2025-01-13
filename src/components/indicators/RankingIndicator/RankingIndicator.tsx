@@ -1,5 +1,5 @@
 import React from "react";
-import { colors } from "../../../config";
+import themeColors from "../../../config/themeColors";
 import Thumbnail from "../../Thumbnail/Thumbnail";
 
 
@@ -44,7 +44,7 @@ const RankingIndicator: React.FC<RankingIndicatorProps> = ({
                                 fontWeight: "bold",
                                 fontSize: "14px",
                                 marginRight: "4px",
-                                color: colors.text,
+                                color: themeColors.text,
                             }}
                         >
                             {index + 1}.
@@ -91,7 +91,7 @@ const RankingIndicator: React.FC<RankingIndicatorProps> = ({
                             style={{
                                 fontWeight: "900",
                                 fontSize: "13px",
-                                color: colors.primary,
+                                color: themeColors.primary,
                                 paddingLeft: 3
                                 //color: item.color,
                             }}

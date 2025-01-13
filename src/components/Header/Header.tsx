@@ -2,7 +2,7 @@
 import React from "react";
 
 import SearchBar from "../SearchBar/SearchBar";
-import { colors } from "../../config";
+import themeColors from "../../config/themeColors";
 import IconButton from "../buttons/IconButton/IconButton";
 
 interface Slot {
@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({
             case "title":
                 return <h1 style={{
                     fontWeight: "900",
-                    color: colors.text,
+                    color: themeColors.text,
                     margin: 0,
                     padding: 0,
                     fontSize: 22,
@@ -92,7 +92,7 @@ const Header: React.FC<HeaderProps> = ({
                                 icon={action.icon}
                                 hasShadow={false}
                                 type='clear'
-                                color={action.color || colors.text}
+                                color={action.color || themeColors.text}
                             />
                         ))}
                     </div>
@@ -106,7 +106,7 @@ const Header: React.FC<HeaderProps> = ({
                         icon={slot.config.icon || "moreVertical"}
                         hasShadow={false}
                         type='clear'
-                        color={slot.config.color || colors.text}
+                        color={slot.config.color || themeColors.text}
                     />
                 );
             default:

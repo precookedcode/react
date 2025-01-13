@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { colors } from "../../config";
+import themeColors from "../../config/themeColors";
 import Icon from "../Icon/Icon";
 import IconButton from "../buttons/IconButton/IconButton";
 
@@ -51,7 +51,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
             style={{
                 display: "flex",
                 alignItems: "center",
-                border: `1px solid ${colors.medium}`,
+                border: `1px solid ${themeColors.medium}`,
                 borderRadius: "25px",
                 padding: "5px 10px",
                 ...containerStyle
@@ -68,7 +68,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
                     outline: "none",
                     padding: "5px",
                     background: 'transparent',
-                    color: colors.text,
+                    color: themeColors.text,
                     fontSize: 16,
                     ...inputStyle
                 }}

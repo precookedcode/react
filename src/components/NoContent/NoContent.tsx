@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { colors } from '../../config';
+import themeColors from '../../config/themeColors';
 import Icon from '../Icon/Icon';
 import DynamicIcon from '../DynamicIcon/DynamicIcon';
 
@@ -37,7 +37,7 @@ const NoContent: React.FC<NoContentProps> = ({
     icon,
     iconPaths,
     iconSize = 60,
-    iconColor = colors.textTint,
+    iconColor = themeColors.textTint,
     message,
 }) => {
     return (
@@ -46,7 +46,7 @@ const NoContent: React.FC<NoContentProps> = ({
             <p style={{
 
                 fontSize: '16px',
-                color: colors.text,
+                color: themeColors.text,
                 fontWeight: '300',
                 padding: 0,
                 margin: 0,

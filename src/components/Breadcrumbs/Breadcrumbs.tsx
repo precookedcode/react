@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { colors } from '../../config';
+import themeColors from '../../config/themeColors';
 import Button from '../buttons/Button/Button';
 import Icon from '../Icon/Icon';
 
@@ -55,7 +55,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ path, onNavigate, containerSt
                             startIconStyle={{
                                 marginRight: 5
                             }}
-                            color={colors.text}
+                            color={themeColors.text}
                             size='md'
                             style={{
                                 padding: 0

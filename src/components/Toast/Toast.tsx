@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import { colors } from "../../config";
+import themeColors from "../../config/themeColors";
 import IconButton from "../buttons/IconButton/IconButton";
 
 
@@ -99,7 +99,7 @@ const Toast: React.FC<ToastProps> = ({
                         position: "fixed",
                         padding: "20px",
                         borderRadius: "5px",
-                        backgroundColor: color || colors.primary,
+                        backgroundColor: color || themeColors.primary,
                         boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
                         display: "flex",
                         justifyContent: "space-between",
@@ -117,7 +117,7 @@ const Toast: React.FC<ToastProps> = ({
                         {title && (
                             <strong
                                 style={{
-                                    color: colors.textShade,
+                                    color: themeColors.textShade,
                                     fontSize: "18px",
                                     ...titleStyle,
                                 }}
@@ -127,7 +127,7 @@ const Toast: React.FC<ToastProps> = ({
                         )}
                         <p
                             style={{
-                                color: colors.textShade,
+                                color: themeColors.textShade,
                                 fontSize: "16px",
                                 margin: 0,
                                 ...messageStyle,
@@ -140,7 +140,7 @@ const Toast: React.FC<ToastProps> = ({
                         <IconButton
                             style={{ marginLeft: "10px" }}
                             icon="close"
-                            color={colors.textShade}
+                            color={themeColors.textShade}
                             onClick={onClose}
                             type="clear"
                             size="xs"

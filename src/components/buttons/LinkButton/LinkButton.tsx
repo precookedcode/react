@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Icon from "../../Icon/Icon";
 import DynamicIcon from "../../DynamicIcon/DynamicIcon";
-import { colors } from "../../../config";
+import themeColors from "../../../config/themeColors";
 import Touchable from "../../Touchable/Touchable";
 
 const hexToRgb = (hex: string) => {
@@ -44,7 +44,7 @@ const resolveIcon = (
 interface LinkButtonProps {
     title: string;
     to?: string; // Path or URL to navigate
-    color?: keyof typeof colors | string;
+    color?: keyof typeof themeColors | string;
     borderRadius?: number;
     type?: "clear" | "outline" | "solid";
     disabled?: boolean;
@@ -118,13 +118,13 @@ const LinkButton: React.FC<LinkButtonProps> = ({
 
     const iconSize = sizeStyles[size]?.iconSize;
 
-    const resolvedColor = color in colors ? colors[color as keyof typeof colors] : color;
+    const resolvedColor = color in themeColors ? themeColors[color as keyof typeof themeColors] : color;
 
     const contentColor =
         type === "solid"
             ? isDarkColor(resolvedColor || "")
                 ? "#fff"
-                : colors.textShade
+                : themeColors.textShade
             : resolvedColor;
 
     const buttonStyle: React.CSSProperties = {

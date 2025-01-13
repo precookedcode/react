@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { colors } from '../../../config';
+import themeColors from '../../../config/themeColors';
 import lightenDarkenColor from '../../../utils/lightenDarkenColor';
 import Popover from '../../Popover/Popover';
 import IconButton from '../../buttons/IconButton/IconButton';
@@ -42,7 +42,7 @@ const ColorField: React.FC<ColorFieldProps> = ({
     const complementaryColors = [
         "#364750", "#4d6572", "#638192", "#7b98ad", "#f2f2f4"
     ];
-    const themeColors = colors;
+    //const themeColors = themeColors;
     const semanticColors: { name: keyof typeof themeColors; label: string }[] = [
         { name: "primary", label: "Principal" },
         { name: "danger", label: "Peligro" },
@@ -95,7 +95,7 @@ const ColorField: React.FC<ColorFieldProps> = ({
                 style={{
                     background: "#fff",
                     width: "100%",
-                    borderColor: colors.medium,
+                    borderColor: themeColors.medium,
                     borderWidth: "2px",
                     borderRadius: "10px",
                     borderStyle: "solid",
@@ -115,7 +115,7 @@ const ColorField: React.FC<ColorFieldProps> = ({
                     padding: "0 5px",
                     background: "#fff",
                     fontWeight: "600",
-                    color: colors.text,
+                    color: themeColors.text,
                     ...labelStyle
                 }}>{label}</label>
 
@@ -238,7 +238,7 @@ const ColorField: React.FC<ColorFieldProps> = ({
                                     padding: "0px",
                                     flexWrap: "nowrap",
                                     marginLeft: "10",
-                                    borderColor: colors.medium,
+                                    borderColor: themeColors.medium,
                                     borderWidth: "2px",
                                     borderRadius: "99px",
                                     borderStyle: "solid",
@@ -262,7 +262,7 @@ const ColorField: React.FC<ColorFieldProps> = ({
                                             border: "none",
                                             fontSize: ".9em",
                                             padding: "5px",
-                                            color: colors.text,
+                                            color: themeColors.text,
                                             fontWeight: 500,
                                             outline: "none",
                                         }}
@@ -295,7 +295,7 @@ const ColorField: React.FC<ColorFieldProps> = ({
                 display: "block",
                 padding: "3px",
                 margin: 0,
-                color: colors.textTint,
+                color: themeColors.textTint,
                 fontSize: ".9em",
                 ...descriptionStyle
             }}>{description}</p>}

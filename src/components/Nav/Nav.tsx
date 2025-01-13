@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import { colors } from '../../config';
+import themeColors from '../../config/themeColors';
 
 interface NavItem {
     label: string;
@@ -20,13 +20,13 @@ const Nav: React.FC<NavProps> = ({ style, itemStyle, activeItemStyle, items, cla
 
     const defaultItemStyle: React.CSSProperties = {
         textDecoration: 'none', // Sin subrayado
-        color: colors.text, // Color por defecto
+        color: themeColors.text, // Color por defecto
         margin: '0 10px', // Margen entre los items
         padding: '8px 16px', // Padding por defecto
     };
 
     const defaultActiveItemStyle: React.CSSProperties = {
-        backgroundColor: colors.primary, // Fondo de item activo
+        backgroundColor: themeColors.primary, // Fondo de item activo
         color: '#fff', // Texto blanco para item activo
         borderRadius: '20px', // Bordes redondeados (pildora)
     };

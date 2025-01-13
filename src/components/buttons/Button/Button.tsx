@@ -1,7 +1,7 @@
 import React, { useState, forwardRef } from "react";
 import DynamicIcon from "../../DynamicIcon/DynamicIcon";
 import Icon from "../../Icon/Icon";
-import { colors } from "../../../config";
+import themeColors from "../../../config/themeColors";
 import Touchable from "../../Touchable/Touchable";
 import TypingEffect from "../../TypingEffect/TypingEffect";
 
@@ -58,7 +58,7 @@ const resolveIcon = (
 interface ButtonProps {
     title: string;
     onClick: () => void;
-    color?: keyof typeof colors | string;
+    color?: keyof typeof themeColors | string;
     borderRadius?: number;
     type?: "clear" | "outline" | "solid";
     disabled?: boolean;
@@ -141,13 +141,13 @@ const Button = forwardRef<HTMLDivElement, ButtonProps>(
 
         const iconSize = sizeStyles[size]?.iconSize;
 
-        const resolvedColor = color in colors ? colors[color as keyof typeof colors] : color;
+        const resolvedColor = color in themeColors ? themeColors[color as keyof typeof themeColors] : color;
 
         const contentColor =
             type === "solid"
                 ? isDarkColor(resolvedColor || "")
                     ? "#fff"
-                    : colors.textShade
+                    : themeColors.textShade
                 : resolvedColor;
 
         const buttonStyle: React.CSSProperties = {
